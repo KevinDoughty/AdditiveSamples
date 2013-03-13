@@ -1,0 +1,13 @@
+This Xcode workspace has several projects which I consider trivial but useful demos of explicit additive animation techniques. In my opinion, additive animation is the best pattern to use for layout and to respond to user interaction. Most projects have a special slow-mo mode by holding down the shift key. By running one animation slowly then one or more at normal speed, you can see the benefit of fire-and-forget concurrent animations. Because concurrent animations flow from one to another seamlessly, blocking animation is less likely to be necessary.
+
+Additive101 is a simple push animation. You can toggle use of additive animation to see the difference.
+
+Additive SceneKit uses a scene from a tutorial by Jeff LaMarche from http://iphonedevelopment.blogspot.com/2012/08/an-introduction-to-scenekit.html
+Probably not useful for Collada files, but conceivably there are situations that would be improved with beautiful curves that presentation layer tree animation cannot deliver.
+
+CoreImageFilter shows, of course, animation of a Core Image filter. The improvement over presentation layer tree animation is subtle but still exists.
+
+Additive Keyframes uses the second order response acceleration curve from Matt Gallagher. http://www.cocoawithlove.com/2008/09/parametric-acceleration-curves-in-core.html
+Keyframe animations will benefit from being additive if they are used in layout or would work conceptually as an implicit animation. If the layer has a destination and keyframes enhance the animation, additive might be a good choice. Animations will not need to be blocking, as starting a new animation while one is running will not produce undesirable transient violations and visible inconsistencies.
+
+AnimationCopying is a simple example of an advanced technique. It is essential when inserting new layers into existing animating layers, for example splitting one layer into two while it is animating. Instead of stopping everything and inserting using the presentation layer, you merely position the layer at its destination and add copies of animations from an existing layer. To see this demo in effect, click "very slow" then "slow" then "medium" then "fast" then "very fast", then start clicking on the layer. Each clicked layer will be split into two layers.

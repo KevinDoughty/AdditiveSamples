@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Additive SceneKit' target in the 'Additive SceneKit' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

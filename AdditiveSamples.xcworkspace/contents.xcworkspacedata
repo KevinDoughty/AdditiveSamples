@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:AnimationCopying/AnimationCopying.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Additive SceneKit/Additive SceneKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Additive101/Additive101.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CoreImageFilter/CoreImageFilter.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Additive Keyframes/Additive Keyframes.xcodeproj">
+   </FileRef>
+</Workspace>
