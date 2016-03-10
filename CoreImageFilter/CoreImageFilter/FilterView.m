@@ -19,7 +19,7 @@
     self.layer = [CALayer layer];
     self.wantsLayer = YES;
     self.layer.contents = [NSImage imageNamed:@"tokyo subway map kanji.png"];
-    
+    self.layerUsesCoreImageFilters = YES;
     NSPoint thePoint = NSMakePoint(self.bounds.size.width/2.0, self.bounds.size.height/2.0);
     CIFilter *vortexFilter = [self filterWithAmount:0 center:thePoint];
     [CATransaction begin];
